@@ -1,9 +1,18 @@
-let ListGroupItem = () => {
-    return <span>Make this component render like a Bootstrap list group item: <a href="https://getbootstrap.com/docs/4.1/components/list-group/" target="_blank">https://goo.gl/images/mY5Qdv</a></span>
+let ListGroupItem = (props) => {
+    return <li className="list-group-item">{props.text}</li>
 }
 
 let ListGroup = () => {
-    return <span>Make this Component render a handful of ListGroupItems</span>
+    return <div style={{maxWidth: "500px"}}>
+      <div>Make this Component render a handful of ListGroupItems</div>
+      <ul className="list-group">
+        <ListGroupItem text="Cras justo odio" />
+        <ListGroupItem text="Dapibus ac facilisis in" />
+        <ListGroupItem text="Morbi leo risus" />
+        <ListGroupItem text="Porta ac consectetur ac" />
+        <ListGroupItem text="Vestibulum at eros" />
+      </ul>
+    </div>
 }
 
 
